@@ -4,7 +4,7 @@
 [下载地址](https://github.com/babalae/genshin-account/releases)
 
 ## 截图
-![Screenshot](https://github.com/babalae/genshin-account/blob/main/Document/Screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/babalae/genshin-account/main/Document/Screenshot.png)
 
 ## 使用方法
 
