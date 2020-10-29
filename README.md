@@ -1,4 +1,6 @@
 # 原神账号切换工具
+## 原神已经修改了账户信息的保存机制，此工具暂时失效
+
 一个用于快速切换原神账户信息的工具，当前仅在Win10环境下测试验证通过。
 
 [下载地址](https://github.com/babalae/genshin-account/releases)
