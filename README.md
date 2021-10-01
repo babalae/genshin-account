@@ -4,7 +4,7 @@
 
 <del>原神周年可以领20连，为了方便切换各个小号领取，所以有了这个工具</del>
 
-[下载地址](https://github.com/babalae/genshin-account/releases)
+[📥Github下载（1.2）](https://github.com/babalae/genshin-account/releases/download/v1.2/GenshinAccount_v1.2.zip)
 
 ## 截图
 ![Screenshot](https://raw.githubusercontent.com/babalae/genshin-account/main/Document/Screenshot.png)
