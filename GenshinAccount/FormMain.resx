@@ -117,14 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lvwAcct.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="name.Text" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="name.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lvwAcct.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 54</value>
   </data>
   <data name="lvwAcct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 210</value>
+    <value>323, 213</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvwAcct.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
@@ -140,18 +150,14 @@
   <data name="&gt;&gt;lvwAcct.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="name.Text" xml:space="preserve">
-    <value>名称</value>
+  <data name="btnSaveCurr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="name.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSaveCurr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnSaveCurr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 54</value>
+    <value>342, 54</value>
   </data>
   <data name="btnSaveCurr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -177,11 +183,14 @@
   <data name="&gt;&gt;btnSaveCurr.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btnSwitch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="btnSwitch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnSwitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 96</value>
+    <value>342, 96</value>
   </data>
   <data name="btnSwitch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -234,11 +243,14 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 141</value>
+    <value>342, 141</value>
   </data>
   <data name="btnDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -264,11 +276,14 @@
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 246</value>
+    <value>374, 246</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -298,7 +313,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>412, 284</value>
+    <value>490, 287</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
