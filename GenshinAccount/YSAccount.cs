@@ -55,7 +55,6 @@ namespace GenshinAccount
             {
                 SetStringToRegedit("MIHOYOSDK_ADL_PROD_CN_h3123967166", MIHOYOSDK_ADL_PROD_CN_h3123967166);
                 SetStringToRegedit("GENERAL_DATA_h2389025596", GENERAL_DATA_h2389025596);
-                MessageBox.Show($"账户[{Name}]切换成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -119,21 +119,21 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvwAcct.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>Top, Bottom, Left</value>
   </data>
   <data name="name.Text" xml:space="preserve">
     <value>名称</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="name.Width" type="System.Int32, mscorlib">
-    <value>120</value>
+    <value>273</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lvwAcct.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 54</value>
   </data>
   <data name="lvwAcct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 213</value>
+    <value>349, 213</value>
   </data>
   <data name="lvwAcct.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -148,22 +148,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lvwAcct.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="btnSaveCurr.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>7</value>
   </data>
   <data name="btnSaveCurr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnSaveCurr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 54</value>
+    <value>396, 113</value>
   </data>
   <data name="btnSaveCurr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="btnSaveCurr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 34</value>
+    <value>135, 33</value>
   </data>
   <data name="btnSaveCurr.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -181,22 +178,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSaveCurr.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnSwitch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>6</value>
   </data>
   <data name="btnSwitch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnSwitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 96</value>
+    <value>396, 155</value>
   </data>
   <data name="btnSwitch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="btnSwitch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 37</value>
+    <value>135, 36</value>
   </data>
   <data name="btnSwitch.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -214,7 +208,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSwitch.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -241,22 +235,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>4</value>
   </data>
   <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>342, 141</value>
+    <value>396, 200</value>
   </data>
   <data name="btnDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 37</value>
+    <value>135, 36</value>
   </data>
   <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -274,16 +265,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="linkLabel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>3</value>
   </data>
   <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 246</value>
+    <value>423, 249</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -304,6 +292,63 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="chkAutoStartYS.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAutoStartYS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 54</value>
+  </data>
+  <data name="chkAutoStartYS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 22</value>
+  </data>
+  <data name="chkAutoStartYS.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="chkAutoStartYS.Text" xml:space="preserve">
+    <value>切换时自动重启原神</value>
+  </data>
+  <data name="&gt;&gt;chkAutoStartYS.Name" xml:space="preserve">
+    <value>chkAutoStartYS</value>
+  </data>
+  <data name="&gt;&gt;chkAutoStartYS.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkAutoStartYS.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkAutoStartYS.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="chkSkipTips.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkSkipTips.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkSkipTips.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 83</value>
+  </data>
+  <data name="chkSkipTips.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="chkSkipTips.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="chkSkipTips.Text" xml:space="preserve">
+    <value>切换时不弹出提示</value>
+  </data>
+  <data name="&gt;&gt;chkSkipTips.Name" xml:space="preserve">
+    <value>chkSkipTips</value>
+  </data>
+  <data name="&gt;&gt;chkSkipTips.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chkSkipTips.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chkSkipTips.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -313,7 +358,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>490, 287</value>
+    <value>576, 287</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

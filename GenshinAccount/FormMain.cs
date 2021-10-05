@@ -18,6 +18,7 @@ namespace GenshinAccount
     {
         private readonly string userDataPath = Path.Combine(Application.StartupPath, "UserData");
         private string thisVersion;
+        private string installPath = FindInstallPathFromRegistry();
         public FormMain()
         {
             InitializeComponent();
@@ -35,8 +36,16 @@ namespace GenshinAccount
             this.Text += currentVersion;
             GAHelper.Instance.RequestPageView($"/acct/main/{thisVersion}", $"进入{thisVersion}版本原神账户切换工具主界面");
 
+
+            chkAutoStartYS.Checked = Properties.Settings.Default.AutoRestartYSEnabled;
+            chkSkipTips.Checked = Properties.Settings.Default.SkipTipsEnabled;
+
             lvwAcct.Columns[0].Width = lvwAcct.Width;
+            ImageList imageList = new ImageList();
+            imageList.ImageSize = new Size(10, 20);
+            lvwAcct.SmallImageList = imageList;
             RefreshList();
+
         }
 
         private void btnSaveCurr_Click(object sender, EventArgs e)
@@ -63,7 +72,7 @@ namespace GenshinAccount
                 });
             }
 
-            if(lvwAcct.Items.Count > 0)
+            if (lvwAcct.Items.Count > 0)
             {
                 btnDelete.Enabled = true;
                 btnSwitch.Enabled = true;
@@ -83,27 +92,66 @@ namespace GenshinAccount
                 return;
             }
             string name = lvwAcct.SelectedItems[0]?.Text;
+            Switch(name, chkAutoStartYS.Checked);
+        }
+
+        private void Switch(string name, bool autoRestart)
+        {
             if (string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("请选择要切换的账号", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            if (YuanShenIsRunning())
+            if (!autoRestart)
             {
-                MessageBox.Show("原神正在运行，请先关闭原神进程后再切换账号！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (MessageBox.Show($"是否要切换为[{name}]", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                YSAccount acct = YSAccount.ReadFromDisk(name);
-                acct.WriteToRegedit();
+                if (YuanShenIsRunning())
+                {
+                    MessageBox.Show("原神正在运行，请先关闭原神进程后再切换账号！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
             }
 
+            if (chkSkipTips.Checked || MessageBox.Show($"是否要切换为[{name}]", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (autoRestart)
+                {
+                    var pros = Process.GetProcessesByName("YuanShen");
+                    if (pros.Any())
+                    {
+                        pros[0].Kill();
+                    }
+                }
+                YSAccount acct = YSAccount.ReadFromDisk(name);
+                acct.WriteToRegedit();
+
+                if (autoRestart)
+                {
+                    if (string.IsNullOrEmpty(installPath))
+                    {
+                        MessageBox.Show("未找到原神安装信息，无法自动启动原神", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        chkAutoStartYS.Checked = false;
+                    }
+                    else
+                    {
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.UseShellExecute = true;
+                        startInfo.WorkingDirectory = Environment.CurrentDirectory;
+                        startInfo.FileName = Path.Combine(installPath, "Genshin Impact Game", "YuanShen.exe");
+                        startInfo.Verb = "runas";
+                        Process.Start(startInfo);
+                    }
+                }
+
+                if (!chkSkipTips.Checked)
+                {
+                    MessageBox.Show($"账户[{name}]切换成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(lvwAcct.SelectedItems.Count == 0)
+            if (lvwAcct.SelectedItems.Count == 0)
             {
                 MessageBox.Show("请选择要切换的账号", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -135,6 +183,54 @@ namespace GenshinAccount
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://github.com/babalae/genshin-account");
+        }
+
+        private void lvwAcct_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = lvwAcct.HitTest(e.X, e.Y);
+            if (info.Item != null)
+            {
+                Switch(info.Item.Text, chkAutoStartYS.Checked);
+            }
+        }
+
+        /// <summary>
+        /// 从注册表中寻找安装路径
+        /// </summary>
+        /// <param name="uninstallKeyName">
+        /// 安装信息的注册表键名 原神
+        /// </param>
+        /// <returns>安装路径</returns>
+        public static string FindInstallPathFromRegistry()
+        {
+            try
+            {
+                using (var hklm = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
+                using (var key = hklm.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\原神"))
+                {
+                    if (key == null)
+                    {
+                        return null;
+                    }
+                    object installLocation = key.GetValue("InstallPath");
+                    if (installLocation != null && !string.IsNullOrEmpty(installLocation.ToString()))
+                    {
+                        return installLocation.ToString();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return null;
+        }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.AutoRestartYSEnabled = chkAutoStartYS.Checked;
+            Properties.Settings.Default.SkipTipsEnabled = chkSkipTips.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }
