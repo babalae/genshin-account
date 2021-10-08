@@ -45,11 +45,11 @@
             // 
             // lvwAcct
             // 
+            resources.ApplyResources(this.lvwAcct, "lvwAcct");
             this.lvwAcct.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.name});
             this.lvwAcct.GridLines = true;
             this.lvwAcct.HideSelection = false;
-            resources.ApplyResources(this.lvwAcct, "lvwAcct");
             this.lvwAcct.MultiSelect = false;
             this.lvwAcct.Name = "lvwAcct";
             this.lvwAcct.UseCompatibleStateImageBehavior = false;
