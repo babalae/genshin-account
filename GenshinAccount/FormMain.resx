@@ -117,24 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lvwAcct.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="name.Text" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="name.Width" type="System.Int32, mscorlib">
-    <value>273</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lvwAcct.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 54</value>
+    <value>12, 150</value>
   </data>
   <data name="lvwAcct.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 213</value>
+    <value>349, 240</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvwAcct.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
@@ -148,13 +138,20 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lvwAcct.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
+  <data name="name.Text" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="name.Width" type="System.Int32, mscorlib">
+    <value>273</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnSaveCurr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnSaveCurr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 113</value>
+    <value>368, 197</value>
   </data>
   <data name="btnSaveCurr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -178,13 +175,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSaveCurr.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="btnSwitch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnSwitch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 155</value>
+    <value>368, 239</value>
   </data>
   <data name="btnSwitch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -208,13 +205,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnSwitch.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 20</value>
+    <value>9, 121</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 18</value>
@@ -235,13 +232,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 200</value>
+    <value>368, 284</value>
   </data>
   <data name="btnDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -265,13 +262,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 249</value>
+    <value>396, 348</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 18</value>
@@ -292,13 +289,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="chkAutoStartYS.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chkAutoStartYS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 54</value>
+    <value>12, 82</value>
   </data>
   <data name="chkAutoStartYS.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 22</value>
@@ -319,7 +316,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chkAutoStartYS.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="chkSkipTips.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -328,7 +325,7 @@
     <value>NoControl</value>
   </data>
   <data name="chkSkipTips.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 83</value>
+    <value>214, 82</value>
   </data>
   <data name="chkSkipTips.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 22</value>
@@ -349,7 +346,88 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chkSkipTips.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 40</value>
+  </data>
+  <data name="txtPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>432, 28</value>
+  </data>
+  <data name="txtPath.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;txtPath.Name" xml:space="preserve">
+    <value>txtPath</value>
+  </data>
+  <data name="&gt;&gt;txtPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPath.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblPathTag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPathTag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 16</value>
+  </data>
+  <data name="lblPathTag.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblPathTag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 18</value>
+  </data>
+  <data name="lblPathTag.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblPathTag.Text" xml:space="preserve">
+    <value>原神安装路径：</value>
+  </data>
+  <data name="&gt;&gt;lblPathTag.Name" xml:space="preserve">
+    <value>lblPathTag</value>
+  </data>
+  <data name="&gt;&gt;lblPathTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPathTag.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPathTag.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnChoosePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 37</value>
+  </data>
+  <data name="btnChoosePath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnChoosePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 34</value>
+  </data>
+  <data name="btnChoosePath.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnChoosePath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;btnChoosePath.Name" xml:space="preserve">
+    <value>btnChoosePath</value>
+  </data>
+  <data name="&gt;&gt;btnChoosePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnChoosePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnChoosePath.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -358,7 +436,7 @@
     <value>9, 18</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>576, 287</value>
+    <value>514, 407</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

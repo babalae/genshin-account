@@ -18,7 +18,7 @@ namespace GenshinAccount
     {
         private readonly string userDataPath = Path.Combine(Application.StartupPath, "UserData");
         private string thisVersion;
-        private string installPath = FindInstallPathFromRegistry();
+
         public FormMain()
         {
             InitializeComponent();
@@ -39,6 +39,15 @@ namespace GenshinAccount
 
             chkAutoStartYS.Checked = Properties.Settings.Default.AutoRestartYSEnabled;
             chkSkipTips.Checked = Properties.Settings.Default.SkipTipsEnabled;
+
+            if (string.IsNullOrEmpty(Properties.Settings.Default.YSInstallPath))
+            {
+                txtPath.Text = FindInstallPathFromRegistry();
+            }
+            else
+            {
+                txtPath.Text = Properties.Settings.Default.YSInstallPath;
+            }
 
             lvwAcct.Columns[0].Width = lvwAcct.Width;
             ImageList imageList = new ImageList();
@@ -126,9 +135,9 @@ namespace GenshinAccount
 
                 if (autoRestart)
                 {
-                    if (string.IsNullOrEmpty(installPath))
+                    if (string.IsNullOrEmpty(txtPath.Text))
                     {
-                        MessageBox.Show("未找到原神安装信息，无法自动启动原神", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("请选择原神安装路径后，才能使用自动重启功能", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         chkAutoStartYS.Checked = false;
                     }
                     else
@@ -136,7 +145,7 @@ namespace GenshinAccount
                         ProcessStartInfo startInfo = new ProcessStartInfo();
                         startInfo.UseShellExecute = true;
                         startInfo.WorkingDirectory = Environment.CurrentDirectory;
-                        startInfo.FileName = Path.Combine(installPath, "Genshin Impact Game", "YuanShen.exe");
+                        startInfo.FileName = Path.Combine(txtPath.Text, "Genshin Impact Game", "YuanShen.exe");
                         startInfo.Verb = "runas";
                         Process.Start(startInfo);
                     }
@@ -230,7 +239,25 @@ namespace GenshinAccount
         {
             Properties.Settings.Default.AutoRestartYSEnabled = chkAutoStartYS.Checked;
             Properties.Settings.Default.SkipTipsEnabled = chkSkipTips.Checked;
+            Properties.Settings.Default.YSInstallPath = txtPath.Text;
             Properties.Settings.Default.Save();
+        }
+
+        private void btnChoosePath_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "请选择原神安装路径";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                if (string.IsNullOrEmpty(dialog.SelectedPath) || !File.Exists(Path.Combine(dialog.SelectedPath, "Genshin Impact Game", "YuanShen.exe")))
+                {
+                    MessageBox.Show("无法在该文件夹中找到原神启动程序，请选择正确的原神安装路径!");
+                }
+                else
+                {
+                    txtPath.Text = dialog.SelectedPath;
+                }
+            }
         }
     }
 }

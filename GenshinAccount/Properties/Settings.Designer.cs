@@ -46,5 +46,17 @@ namespace GenshinAccount.Properties {
                 this["SkipTipsEnabled"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string YSInstallPath {
+            get {
+                return ((string)(this["YSInstallPath"]));
+            }
+            set {
+                this["YSInstallPath"] = value;
+            }
+        }
     }
 }

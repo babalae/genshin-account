@@ -38,15 +38,18 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.chkAutoStartYS = new System.Windows.Forms.CheckBox();
             this.chkSkipTips = new System.Windows.Forms.CheckBox();
+            this.txtPath = new System.Windows.Forms.TextBox();
+            this.lblPathTag = new System.Windows.Forms.Label();
+            this.btnChoosePath = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvwAcct
             // 
-            resources.ApplyResources(this.lvwAcct, "lvwAcct");
             this.lvwAcct.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.name});
             this.lvwAcct.GridLines = true;
             this.lvwAcct.HideSelection = false;
+            resources.ApplyResources(this.lvwAcct, "lvwAcct");
             this.lvwAcct.MultiSelect = false;
             this.lvwAcct.Name = "lvwAcct";
             this.lvwAcct.UseCompatibleStateImageBehavior = false;
@@ -102,10 +105,30 @@
             this.chkSkipTips.Name = "chkSkipTips";
             this.chkSkipTips.UseVisualStyleBackColor = true;
             // 
+            // txtPath
+            // 
+            resources.ApplyResources(this.txtPath, "txtPath");
+            this.txtPath.Name = "txtPath";
+            // 
+            // lblPathTag
+            // 
+            resources.ApplyResources(this.lblPathTag, "lblPathTag");
+            this.lblPathTag.Name = "lblPathTag";
+            // 
+            // btnChoosePath
+            // 
+            resources.ApplyResources(this.btnChoosePath, "btnChoosePath");
+            this.btnChoosePath.Name = "btnChoosePath";
+            this.btnChoosePath.UseVisualStyleBackColor = true;
+            this.btnChoosePath.Click += new System.EventHandler(this.btnChoosePath_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtPath);
+            this.Controls.Add(this.lblPathTag);
+            this.Controls.Add(this.btnChoosePath);
             this.Controls.Add(this.chkSkipTips);
             this.Controls.Add(this.chkAutoStartYS);
             this.Controls.Add(this.linkLabel1);
@@ -132,6 +155,9 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.CheckBox chkAutoStartYS;
         private System.Windows.Forms.CheckBox chkSkipTips;
+        private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.Label lblPathTag;
+        private System.Windows.Forms.Button btnChoosePath;
     }
 }
 
