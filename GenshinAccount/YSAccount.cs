@@ -47,14 +47,18 @@ namespace GenshinAccount
 
         public void WriteToRegedit()
         {
-            if (string.IsNullOrWhiteSpace(MIHOYOSDK_ADL_PROD_CN_h3123967166) || string.IsNullOrWhiteSpace(GENERAL_DATA_h2389025596))
+            if (string.IsNullOrWhiteSpace(MIHOYOSDK_ADL_PROD_CN_h3123967166))
             {
                 MessageBox.Show("保存账户内容为空", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 SetStringToRegedit("MIHOYOSDK_ADL_PROD_CN_h3123967166", MIHOYOSDK_ADL_PROD_CN_h3123967166);
-                SetStringToRegedit("GENERAL_DATA_h2389025596", GENERAL_DATA_h2389025596);
+                if (!string.IsNullOrWhiteSpace(GENERAL_DATA_h2389025596))
+                {
+                    SetStringToRegedit("GENERAL_DATA_h2389025596", GENERAL_DATA_h2389025596);
+                }
+
             }
         }
 

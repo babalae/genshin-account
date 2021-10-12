@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\hutao.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -81,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -97,9 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.ico" />
     <Content Include="icon.ico" />
-    <Content Include="Res\icon.ico" />
+    <None Include="Resources\attention.png" />
+    <None Include="Resources\hutao.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

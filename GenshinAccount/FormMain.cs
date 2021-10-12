@@ -79,6 +79,13 @@ namespace GenshinAccount
                 {
                     Text = file.Name
                 });
+                ToolStripMenuItem m = new ToolStripMenuItem()
+                {
+                    Name = file.Name,
+                    Text = file.Name,
+                };
+                m.Click += new System.EventHandler(this.ToolStripMenuClick);
+                contextMenuStrip1.Items.Add(m);
             }
 
             if (lvwAcct.Items.Count > 0)
@@ -91,6 +98,11 @@ namespace GenshinAccount
                 btnDelete.Enabled = false;
                 btnSwitch.Enabled = false;
             }
+        }
+
+        private void ToolStripMenuClick(object sender, EventArgs e)
+        {
+
         }
 
         private void btnSwitch_Click(object sender, EventArgs e)
@@ -258,6 +270,45 @@ namespace GenshinAccount
                     txtPath.Text = dialog.SelectedPath;
                 }
             }
+        }
+
+        private void FormMain_SizeChanged(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.ShowInTaskbar = false;
+                //notifyIcon.Visible = true;
+            }
+        }
+
+        private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
+                //notifyIcon.Visible = false;
+            }
+            this.Activate();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.Close();
+        }
+
+        private void 显示主界面ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            notifyIcon_DoubleClick(sender, e);
+        }
+
+        private void RefreshContextMenuStrip()
+        {
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.显示主界面ToolStripMenuItem,
+            this.退出ToolStripMenuItem,
+            this.toolStripSeparator1});
         }
     }
 }
