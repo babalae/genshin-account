@@ -58,5 +58,29 @@ namespace GenshinAccount.Properties {
                 this["YSInstallPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string YSStartParam {
+            get {
+                return ((string)(this["YSStartParam"]));
+            }
+            set {
+                this["YSStartParam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool MinimizeToNotifyAreaEnabled {
+            get {
+                return ((bool)(this["MinimizeToNotifyAreaEnabled"]));
+            }
+            set {
+                this["MinimizeToNotifyAreaEnabled"] = value;
+            }
+        }
     }
 }

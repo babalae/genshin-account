@@ -456,23 +456,8 @@
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>168, 17</value>
   </metadata>
-  <data name="显示主界面ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 30</value>
-  </data>
-  <data name="显示主界面ToolStripMenuItem.Text" xml:space="preserve">
-    <value>显示主界面</value>
-  </data>
-  <data name="退出ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 30</value>
-  </data>
-  <data name="退出ToolStripMenuItem.Text" xml:space="preserve">
-    <value>退出</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 6</value>
-  </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 103</value>
+    <value>171, 70</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>
@@ -483,8 +468,20 @@
   <data name="notifyIcon.Text" xml:space="preserve">
     <value>原神账户切换启动工具</value>
   </data>
-  <data name="notifyIcon.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="显示主界面ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 30</value>
+  </data>
+  <data name="显示主界面ToolStripMenuItem.Text" xml:space="preserve">
+    <value>显示主界面</value>
+  </data>
+  <data name="退出ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 30</value>
+  </data>
+  <data name="退出ToolStripMenuItem.Text" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 6</value>
   </data>
   <data name="chkMinimizeToNotifyArea.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -576,6 +573,9 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="tipHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>400, 17</value>
+  </metadata>
   <data name="picHelpSatrtParam.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -593,6 +593,12 @@
   </data>
   <data name="picHelpSatrtParam.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
+  </data>
+  <data name="picHelpSatrtParam.ToolTip" xml:space="preserve">
+    <value>如果你不知道什么是启动参数请不要填写。
+常见启动参数：
+无边框 -popupwindow
+指定分辨率 -screen-width 1600 -screen-height 900</value>
   </data>
   <data name="&gt;&gt;picHelpSatrtParam.Name" xml:space="preserve">
     <value>picHelpSatrtParam</value>
@@ -623,6 +629,14 @@
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
+  </data>
+  <metadata name="tipHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>400, 17</value>
+  </metadata>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value>选中后可以最小化至托盘图标，右键图标选择账号进行切换。
+建议配合勾选“切换时自动重启原神”、“切换时不弹出提示”两项选项。
+切换体验十分丝滑。</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
     <value>pictureBox1</value>
@@ -683,6 +697,12 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tipHelp.Name" xml:space="preserve">
+    <value>tipHelp</value>
+  </data>
+  <data name="&gt;&gt;tipHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

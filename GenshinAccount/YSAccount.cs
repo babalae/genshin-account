@@ -37,11 +37,14 @@ namespace GenshinAccount
             File.Delete(Path.Combine(Application.StartupPath, "UserData", name));
         }
 
-        public static YSAccount ReadFromRegedit()
+        public static YSAccount ReadFromRegedit(bool needSettings)
         {
             YSAccount acct = new YSAccount();
             acct.MIHOYOSDK_ADL_PROD_CN_h3123967166 = GetStringFromRegedit("MIHOYOSDK_ADL_PROD_CN_h3123967166");
-            acct.GENERAL_DATA_h2389025596 = GetStringFromRegedit("GENERAL_DATA_h2389025596");
+            if(needSettings)
+            {
+                acct.GENERAL_DATA_h2389025596 = GetStringFromRegedit("GENERAL_DATA_h2389025596");
+            }
             return acct;
         }
 

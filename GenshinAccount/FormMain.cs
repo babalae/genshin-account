@@ -18,6 +18,7 @@ namespace GenshinAccount
     {
         private readonly string userDataPath = Path.Combine(Application.StartupPath, "UserData");
         private string thisVersion;
+        private List<ToolStripMenuItem> acctMenuItemList = new List<ToolStripMenuItem>();
 
         public FormMain()
         {
@@ -39,6 +40,9 @@ namespace GenshinAccount
 
             chkAutoStartYS.Checked = Properties.Settings.Default.AutoRestartYSEnabled;
             chkSkipTips.Checked = Properties.Settings.Default.SkipTipsEnabled;
+            txtStartParam.Text = Properties.Settings.Default.YSStartParam;
+            notifyIcon.Visible = chkMinimizeToNotifyArea.Checked = Properties.Settings.Default.MinimizeToNotifyAreaEnabled;
+
 
             if (string.IsNullOrEmpty(Properties.Settings.Default.YSInstallPath))
             {
@@ -66,11 +70,18 @@ namespace GenshinAccount
 
         private void RefreshList()
         {
+            contextMenuStrip1.Items.Clear();
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                this.显示主界面ToolStripMenuItem,
+                this.退出ToolStripMenuItem,
+                this.toolStripSeparator1});
+
             if (!Directory.Exists(userDataPath))
             {
                 Directory.CreateDirectory(userDataPath);
             }
             lvwAcct.Items.Clear();
+            acctMenuItemList.Clear();
             DirectoryInfo root = new DirectoryInfo(userDataPath);
             FileInfo[] files = root.GetFiles();
             foreach (FileInfo file in files)
@@ -84,8 +95,9 @@ namespace GenshinAccount
                     Name = file.Name,
                     Text = file.Name,
                 };
-                m.Click += new System.EventHandler(this.ToolStripMenuClick);
+                m.Click += new EventHandler(this.ToolStripMenuClick);
                 contextMenuStrip1.Items.Add(m);
+                acctMenuItemList.Add(m);
             }
 
             if (lvwAcct.Items.Count > 0)
@@ -102,7 +114,12 @@ namespace GenshinAccount
 
         private void ToolStripMenuClick(object sender, EventArgs e)
         {
-
+            Switch((sender as ToolStripMenuItem).Text, chkAutoStartYS.Checked);
+            foreach (ToolStripMenuItem menuItem in acctMenuItemList)
+            {
+                menuItem.Checked = false;
+            }
+           (sender as ToolStripMenuItem).Checked = true;
         }
 
         private void btnSwitch_Click(object sender, EventArgs e)
@@ -159,6 +176,7 @@ namespace GenshinAccount
                         startInfo.WorkingDirectory = Environment.CurrentDirectory;
                         startInfo.FileName = Path.Combine(txtPath.Text, "Genshin Impact Game", "YuanShen.exe");
                         startInfo.Verb = "runas";
+                        startInfo.Arguments = txtStartParam.Text;
                         Process.Start(startInfo);
                     }
                 }
@@ -252,6 +270,8 @@ namespace GenshinAccount
             Properties.Settings.Default.AutoRestartYSEnabled = chkAutoStartYS.Checked;
             Properties.Settings.Default.SkipTipsEnabled = chkSkipTips.Checked;
             Properties.Settings.Default.YSInstallPath = txtPath.Text;
+            Properties.Settings.Default.YSStartParam = txtStartParam.Text;
+            Properties.Settings.Default.MinimizeToNotifyAreaEnabled = chkMinimizeToNotifyArea.Checked;
             Properties.Settings.Default.Save();
         }
 
@@ -274,10 +294,9 @@ namespace GenshinAccount
 
         private void FormMain_SizeChanged(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Minimized)
+            if (WindowState == FormWindowState.Minimized && notifyIcon.Visible)
             {
                 this.ShowInTaskbar = false;
-                //notifyIcon.Visible = true;
             }
         }
 
@@ -306,9 +325,14 @@ namespace GenshinAccount
         private void RefreshContextMenuStrip()
         {
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.显示主界面ToolStripMenuItem,
-            this.退出ToolStripMenuItem,
-            this.toolStripSeparator1});
+                this.显示主界面ToolStripMenuItem,
+                this.退出ToolStripMenuItem,
+                this.toolStripSeparator1});
+        }
+
+        private void chkMinimizeToNotifyArea_CheckedChanged(object sender, EventArgs e)
+        {
+            notifyIcon.Visible = chkMinimizeToNotifyArea.Checked;
         }
     }
 }

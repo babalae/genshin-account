@@ -52,6 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.picHelpSatrtParam = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tipHelp = new System.Windows.Forms.ToolTip(this.components);
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHelpSatrtParam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -175,6 +176,7 @@
             resources.ApplyResources(this.chkMinimizeToNotifyArea, "chkMinimizeToNotifyArea");
             this.chkMinimizeToNotifyArea.Name = "chkMinimizeToNotifyArea";
             this.chkMinimizeToNotifyArea.UseVisualStyleBackColor = true;
+            this.chkMinimizeToNotifyArea.CheckedChanged += new System.EventHandler(this.chkMinimizeToNotifyArea_CheckedChanged);
             // 
             // txtStartParam
             // 
@@ -192,6 +194,7 @@
             resources.ApplyResources(this.picHelpSatrtParam, "picHelpSatrtParam");
             this.picHelpSatrtParam.Name = "picHelpSatrtParam";
             this.picHelpSatrtParam.TabStop = false;
+            this.tipHelp.SetToolTip(this.picHelpSatrtParam, resources.GetString("picHelpSatrtParam.ToolTip"));
             // 
             // pictureBox1
             // 
@@ -199,6 +202,7 @@
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.tipHelp.SetToolTip(this.pictureBox1, resources.GetString("pictureBox1.ToolTip"));
             // 
             // FormMain
             // 
@@ -256,6 +260,7 @@
         private System.Windows.Forms.ToolStripMenuItem 显示主界面ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolTip tipHelp;
     }
 }
 

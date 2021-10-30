@@ -25,7 +25,7 @@ namespace GenshinAccount
                 return;
             }
 
-            YSAccount acct = YSAccount.ReadFromRegedit();
+            YSAccount acct = YSAccount.ReadFromRegedit(chkSaveSettings.Checked);
             acct.Name = txtAcctName.Text;
             acct.WriteToDisk();
             this.Close();
