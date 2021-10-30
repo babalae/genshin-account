@@ -281,6 +281,10 @@ namespace GenshinAccount
             dialog.Description = "请选择原神安装路径";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
+                if(!string.IsNullOrEmpty(dialog.SelectedPath) && File.Exists(Path.Combine(dialog.SelectedPath, "YuanShen.exe")))
+                {
+                    dialog.SelectedPath = dialog.SelectedPath.Replace("Genshin Impact Game","");
+                }
                 if (string.IsNullOrEmpty(dialog.SelectedPath) || !File.Exists(Path.Combine(dialog.SelectedPath, "Genshin Impact Game", "YuanShen.exe")))
                 {
                     MessageBox.Show("无法在该文件夹中找到原神启动程序，请选择正确的原神安装路径!");
