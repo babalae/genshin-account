@@ -190,8 +190,8 @@
             // 
             // picHelpSatrtParam
             // 
-            this.picHelpSatrtParam.Image = global::GenshinAccount.Properties.Resources.attention;
             resources.ApplyResources(this.picHelpSatrtParam, "picHelpSatrtParam");
+            this.picHelpSatrtParam.Image = global::GenshinAccount.Properties.Resources.attention;
             this.picHelpSatrtParam.Name = "picHelpSatrtParam";
             this.picHelpSatrtParam.TabStop = false;
             this.tipHelp.SetToolTip(this.picHelpSatrtParam, resources.GetString("picHelpSatrtParam.ToolTip"));

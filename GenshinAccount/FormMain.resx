@@ -576,6 +576,9 @@
   <metadata name="tipHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>400, 17</value>
   </metadata>
+  <data name="picHelpSatrtParam.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="picHelpSatrtParam.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -612,6 +615,9 @@
   <data name="&gt;&gt;picHelpSatrtParam.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="tipHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>400, 17</value>
+  </metadata>
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -630,9 +636,6 @@
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
   </data>
-  <metadata name="tipHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>400, 17</value>
-  </metadata>
   <data name="pictureBox1.ToolTip" xml:space="preserve">
     <value>选中后可以最小化至托盘图标，右键图标选择账号进行切换。
 建议配合勾选“切换时自动重启原神”、“切换时不弹出提示”两项选项。
@@ -650,6 +653,9 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="tipHelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>400, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -666,7 +672,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>原神账户切换工具</value>
+    <value>原神账号切换工具</value>
   </data>
   <data name="&gt;&gt;name.Name" xml:space="preserve">
     <value>name</value>
