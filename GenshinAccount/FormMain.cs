@@ -171,13 +171,20 @@ namespace GenshinAccount
                     }
                     else
                     {
-                        ProcessStartInfo startInfo = new ProcessStartInfo();
-                        startInfo.UseShellExecute = true;
-                        startInfo.WorkingDirectory = Environment.CurrentDirectory;
-                        startInfo.FileName = Path.Combine(txtPath.Text, "Genshin Impact Game", "YuanShen.exe");
-                        startInfo.Verb = "runas";
-                        startInfo.Arguments = txtStartParam.Text;
-                        Process.Start(startInfo);
+                        try
+                        {
+                            ProcessStartInfo startInfo = new ProcessStartInfo();
+                            startInfo.UseShellExecute = true;
+                            startInfo.WorkingDirectory = Environment.CurrentDirectory;
+                            startInfo.FileName = Path.Combine(txtPath.Text, "Genshin Impact Game", "YuanShen.exe");
+                            startInfo.Verb = "runas";
+                            startInfo.Arguments = txtStartParam.Text;
+                            Process.Start(startInfo);
+                        }
+                        catch
+                        {
+
+                        }
                     }
                 }
 
@@ -281,9 +288,9 @@ namespace GenshinAccount
             dialog.Description = "请选择原神安装路径";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                if(!string.IsNullOrEmpty(dialog.SelectedPath) && File.Exists(Path.Combine(dialog.SelectedPath, "YuanShen.exe")))
+                if (!string.IsNullOrEmpty(dialog.SelectedPath) && File.Exists(Path.Combine(dialog.SelectedPath, "YuanShen.exe")))
                 {
-                    dialog.SelectedPath = dialog.SelectedPath.Replace("Genshin Impact Game","");
+                    dialog.SelectedPath = dialog.SelectedPath.Replace("Genshin Impact Game", "");
                 }
                 if (string.IsNullOrEmpty(dialog.SelectedPath) || !File.Exists(Path.Combine(dialog.SelectedPath, "Genshin Impact Game", "YuanShen.exe")))
                 {
