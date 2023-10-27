@@ -1,4 +1,4 @@
-更多： [🎲七圣召唤自动打牌](https://github.com/babalae/genius-invokation-auto-toy) | [🐟 自动钓鱼机](https://github.com/babalae/genshin-fishing-toy) 
+更多： **[🍨BetterGI · 更好的原神（自动化工具合集）](https://github.com/babalae/better-genshin-impact)** | [🎲七圣召唤自动打牌](https://github.com/babalae/genius-invokation-auto-toy) | [🐟 自动钓鱼机](https://github.com/babalae/genshin-fishing-toy) 
 
 # 重写了下这个项目，支持更多，原神、云·原神、崩坏：星穹铁道 多账号快速切换工具 -> [https://github.com/babalae/mihoyo-starter](https://github.com/babalae/mihoyo-starter)，所以这个项目就不更新啦
 
